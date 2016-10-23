@@ -3,8 +3,8 @@
     if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])){
         header("Location: login");
         exit;
-    }	
-        
+    }
+
 ?>
 <?php include_once(dirname(__FILE__).'/Controller/TrackingController.php');?>
 <?php include_once(dirname(__FILE__).'/Controller/UserController.php');?>
@@ -18,7 +18,7 @@
     $userController = UserController::getInstance();
     $month = 0;
     $year = 0;
-    if (isset($_GET["submit"]) && $_GET["submit"] == "yes" && 
+    if (isset($_GET["submit"]) && $_GET["submit"] == "yes" &&
         isset($_GET["month"]) && isset($_GET["year"])) {
         $month = $_GET["month"];
         $year = $_GET["year"];
@@ -55,7 +55,7 @@
         <link href="includes/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="includes/css/style.css" rel="stylesheet">
         <link href="includes/css/tracking.css" rel="stylesheet">
-	<link href="includes/img/logo.ico" rel="icon">
+		<link href="includes/img/logo.ico" rel="icon">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="includes/js/bootstrap.min.js"></script>
     </head>
@@ -109,7 +109,7 @@
 			</div>
         </form>
         <?php
-            if (isset($_GET["submit"]) && $_GET["submit"] == "yes" && 
+            if (isset($_GET["submit"]) && $_GET["submit"] == "yes" &&
                 isset($_GET["month"]) && isset($_GET["year"])) {
                 echo "<h2 style='text-align:center;'>";
                 echo "Duty Money Tracking for $monthName[$month] $year";
@@ -118,7 +118,7 @@
         ?>
         <div class='progressbar'>
         <?php
-            if (isset($_GET["submit"]) && $_GET["submit"] == "yes" && 
+            if (isset($_GET["submit"]) && $_GET["submit"] == "yes" &&
                 isset($_GET["month"]) && isset($_GET["year"])) {
                 if (count($trackingData) > 0) {
                     echo "<ol class='selected-step-".$currentStep."'>";

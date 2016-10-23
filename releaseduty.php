@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])){
         header("Location: login");
-        exit;        
+        exit;
     }
     if(!isset($_GET['date']) || !isset($_GET['month']) || !isset($_GET['year']) || !isset($_GET['venue']) || !isset($_GET['schedule_id'])){
         if (!isset($_POST['drop'])) {
@@ -43,17 +43,17 @@
         $startTime = $dutyController->getTimeDuty($startID);
         $endTime = $dutyController->getTimeDuty($endID);
         $dutyTime = substr($startTime,0,5)."-".substr($endTime,6,5);
-        
+
         $monthName = ["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
         $monthName = $monthName[intval($month)];
-        
+
         $subject = "Duty notification: {$dutyTime} on {$day}, {$date} {$monthName} {$year} at {$venue}";
         $message = "From: {$user_name}\nDate:{$day} {$date} {$monthName} {$year}\n";
         $message.= "Duty for grab at times: {$dutyTime}\n";
         $message.= "Venue:".strtoupper($venue)."\n";
         $message.= "\n\nGo to ".DOMAIN."/grablist to grab it!";
         $message.= FOOTER_MESSAGE;
-        
+
         //$subject = "gw ganteng";
         //$message = "banget";
 
@@ -87,7 +87,7 @@
             <link href="includes/css/bootstrap.min.css" rel="stylesheet">
             <link href="includes/css/bootstrap-theme.min.css" rel="stylesheet">
             <link href="includes/css/style.css" rel="stylesheet">
-	    <link href="includes/img/logo.ico" rel="icon">
+		    <link href="includes/img/logo.ico" rel="icon">
             <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
             <script src="includes/js/bootstrap.min.js"></script>
 	</head>

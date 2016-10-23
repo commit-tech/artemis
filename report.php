@@ -3,7 +3,7 @@
     if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])){
         header("Location: login");
         exit;
-    }	
+    }
     include_once(dirname(__FILE__).'/Controller/UserController.php');
     include_once(dirname(__FILE__).'/Controller/ProblemController.php');
     $userController = UserController::getInstance();
@@ -30,7 +30,7 @@
         <link href="includes/css/bootstrap.min.css" rel="stylesheet">
         <link href="includes/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="includes/css/style.css" rel="stylesheet">
-	<link href="includes/img/logo.ico" rel="icon">
+		<link href="includes/img/logo.ico" rel="icon">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="includes/js/bootstrap.min.js"></script>
     </head>
@@ -91,14 +91,14 @@
                     If the computer is completely broken and cannot be used (e.g. cannot login, cannot boot to Windows, etc.), choose the tick mark.
                     Otherwise, if the computer still can be used (e.g. noisy CPU, very slow, etc.), choose the cross mark.
                 </div>
-                
+
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </form>
-        </div> 
+        </div>
         <?php include(dirname(__FILE__).'/includes/footer.php');?>
     </body>
 </html>

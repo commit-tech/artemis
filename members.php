@@ -32,13 +32,13 @@
         <link href="includes/css/bootstrap.min.css" rel="stylesheet">
         <link href="includes/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="includes/css/style.css" rel="stylesheet">
-	<link href="includes/img/logo.ico" rel="icon">
+		<link href="includes/img/logo.ico" rel="icon">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="includes/js/bootstrap.min.js"></script>
         <script src="includes/js/jquery.tablesorter.min.js"></script>
         <script>
             function checkAll(){
-                var checkboxes = document.getElementsByTagName('input'), val = null;    
+                var checkboxes = document.getElementsByTagName('input'), val = null;
                 for (var i = 0; i < checkboxes.length; i++) {
                     if (checkboxes[i].type == 'checkbox'){
                         if (val === null) val = checkboxes[i].checked;

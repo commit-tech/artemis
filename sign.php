@@ -3,14 +3,14 @@
     if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])){
         header("Location: login");
         exit;
-    }	
+    }
     include_once(dirname(__FILE__).'/Controller/UserController.php');
     $userController = UserController::getInstance();
     if ($userController->getDutyStatus($_SESSION['user_id']) == 0) {
         header("Location: tracking");
         exit;
     }
-        
+
 ?>
 <?php include(dirname(__FILE__).'/Controller/SignController.php');?>
 <?php
@@ -28,13 +28,12 @@
     }
 ?>
 
-
 <html>
 	<head>
 		<title>NUSSU commIT</title>
 		<link href="includes/css/bootstrap.min.css" rel="stylesheet">
 		<link href="includes/css/bootstrap-theme.min.css" rel="stylesheet">
-       		<link href="includes/css/style.css" rel="stylesheet">
+      	<link href="includes/css/style.css" rel="stylesheet">
 		<link href="includes/img/logo.ico" rel="icon">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="includes/js/bootstrap.min.js"></script>
@@ -52,7 +51,7 @@
                 unset($_SESSION['success']);
             }
         ?>
-        
+
 		<div class="container">
 			<div class="row">
 			<?php
@@ -74,8 +73,6 @@
 			?>
 			</div>
 
-		
-
         <form class="form-horizontal well" action="sign" method="post">
 			<div class="form-group">
 				<label class="control-label col-xs-2">Name</label>
@@ -93,7 +90,7 @@
 					<label class="btn btn-default"><input type="radio" name="venue" value="cl" />CL</label>
 				</div>
             </div>
-			
+
 			<div class="form-group">
 				<label class="control-label col-sm-2">
 				Action
@@ -103,7 +100,7 @@
 					<label class="btn btn-default"><input type="radio" name="sign" value="out" />Sign out</label>
 				</div>
 			</div>
-			
+
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
