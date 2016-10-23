@@ -61,19 +61,20 @@
         <link href="includes/css/bootstrap.min.css" rel="stylesheet">
         <link href="includes/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="includes/css/style.css" rel="stylesheet">
+		<link href="includes/img/logo.ico" rel="icon">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="includes/js/bootstrap.min.js"></script>
     </head>
-    <body>                     
+    <body>
 
         <?php $page = "postEOD"; ?>
         <?php include(dirname(__FILE__).'/includes/header.php');?>
-        <?php 
+        <?php
             if(isset($_SESSION['error'])){
                 echo '<div class="alert alert-danger">'.$_SESSION['error'].'</div>';
                 unset($_SESSION['error']);
-            } 
-            
+            }
+
         ?>
 		<div class="container">
         <h1> Post EOD Form</h1>
@@ -93,13 +94,13 @@
                     </div>
                 </div>
             <?php
-            } else { 
+            } else {
                 if ($_POST['venue'] == 'YIH') {?>
                     <div class ="form-group">
                         <label class = "col-sm-2 control-label">Paper: </label>
                         <div class ="col-sm-1">
                             <input type="text" name = "paperbox" class="form-control" placeholder = "boxes" required>
-                        </div> 
+                        </div>
                         <div class ="col-sm-1">
                             <input type="text" name = "paperreams" class="form-control" placeholder = "reams" required>
                         </div>
@@ -129,7 +130,7 @@
                     </div>
                 <?php
                 } ?>
-                
+
                 <div class = "form-group">
                     <label for="cartridge" class="col-sm-2 control-label">Cartridge: </label>
                     <div class = "col-sm-4">

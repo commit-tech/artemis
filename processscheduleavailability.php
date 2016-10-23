@@ -3,7 +3,7 @@
     if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])){
         header("Location: login");
         exit;
-    }   
+    }
 ?>
 <?php include_once(dirname(__FILE__).'/Controller/ScheduleController.php');?>
 <?php include_once(dirname(__FILE__).'/Controller/UserController.php');?>
@@ -31,6 +31,7 @@
         <link href="includes/css/bootstrap.min.css" rel="stylesheet">
         <link href="includes/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="includes/css/style.css" rel="stylesheet">
+		<link href="includes/img/logo.ico" rel="icon">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="includes/js/bootstrap.min.js"></script>
     </head>
@@ -88,7 +89,7 @@
                 <tr class='table_header'>
                     <td style="width: 6%">Date</td>
                     <?php
-                    
+
                     for ($i = 0; $i < count($dutySchedule); ++$i)
                     {
                         echo "<th class=\"breakword timeslot\">".$dutySchedule[$i]["time"]."</th>";
@@ -135,7 +136,6 @@
                     }
                 }
 
-
                 for ($i = 0; $i < 7; ++$i)
                 {
                     echo "<tr class='blank_row'/>";
@@ -149,13 +149,13 @@
                 }
                 ?>
             </table>
-        <?php 
+        <?php
             } else { ?>
                 <table border=1 class="table edittable">
                 <tr class='table_header'>
                     <td style="width: 6%">Date</td>
                     <?php
-                    
+
                     for ($i = 0; $i < count($dutySchedule); ++$i)
                     {
                         echo "<th class=\"breakword timeslot\">".$dutySchedule[$i]["time"]."</th>";
@@ -198,7 +198,6 @@
                         }
                     }
                 }
-
 
                 for ($i = 0; $i < 7; ++$i)
                 {

@@ -3,7 +3,7 @@
     if(!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])){
 		header("Location: login");
 		exit;
-	}	
+	}
     include_once(dirname(__FILE__).'/Controller/UserController.php');
     $userController = UserController::getInstance();
     if ($userController->getDutyStatus($_SESSION['user_id']) == 0) {
@@ -12,13 +12,13 @@
     }
 ?>
 
-
 <html>
 	<head>
 		<title>NUSSU commIT</title>
 		<link href="includes/css/bootstrap.min.css" rel="stylesheet">
 		<link href="includes/css/bootstrap-theme.min.css" rel="stylesheet">
-        <link href="includes/css/style.css" rel="stylesheet">
+        	<link href="includes/css/style.css" rel="stylesheet">
+		<link href="includes/img/logo.ico" rel="icon">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="includes/js/bootstrap.min.js"></script>
 	</head>
@@ -74,11 +74,11 @@
 		<?php
 		}
         ?>
-		
+
 		</div>
 
         <div class="row">
-		
+
         <table border=1 class="table">
             <tr class="table_header">
                 <td style="width: 6%">Date</td>
@@ -99,14 +99,14 @@
                 }
                 ?>
             </tr>
-            
+
             <?php
             function printTable($location) {
                 global $i;
                 global $day;
                 global $userController;
                 global $dutySchedule;
-                
+
                     $columnLength = 0;
                     for ($j = 0; $j <= count($dutySchedule); ++$j)
                     {
@@ -151,11 +151,11 @@
                         }
                     }
             }
-            
+
             while ($day->getDay() != "Monday") {
                     $day = $day->minusDay(1);
                 }
-            
+
             for ($i = 0; $i < 7; ++$i)
             {
                 echo "<tr class='blank_row'/>";
@@ -170,12 +170,12 @@
                     echo "<th>CL</th>";
                     printTable("cl");
                 echo "</tr>\n";
-                
+
                 $day = $day->addDay(1);
             }
             ?>
         </table>
-		
+
 		</div>
 		</div>
         <?php include(dirname(__FILE__).'/includes/footer.php');?>
