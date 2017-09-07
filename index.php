@@ -58,7 +58,7 @@
 		</div>
 		<div class="col-sm-5 well">
             <a class="btn btn-default" href="editschedule">Edit Permanent</a>
-            <a class="btn btn-default" href="edittempschedule">Edit Termporary</a>
+            <a class="btn btn-default" href="edittempschedule">Edit Temporary</a>
 			<a class="btn btn-default" href="?plus=<?php echo $plus-7; ?>">Previous Week</a>
 			<a class="btn btn-default" href="?plus=<?php echo $plus+7; ?>">Next Week</a>
 		</div>
