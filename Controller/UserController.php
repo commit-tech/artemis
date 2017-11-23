@@ -248,8 +248,7 @@ class UserController {
     }
 
     public function getProblemReportTargets(){
-        $williamId = 43;
-        $condition = array('cell' => 'Technical', ' OR id' => $williamId);
+        $condition = array('cell' => 'Technical');
          return $this->userList->get($condition);
     }
 }
