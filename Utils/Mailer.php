@@ -14,7 +14,7 @@ function sendMail($subject, $message, $targets){
 	$mail->Port = 587;
 	$mail->SMTPAuth = true;
 	$mail->Username = "dutygrab@gmail.com";
-	$mail->Password = "teamnuschess";
+	$mail->Password = "te4mnuschess";
 	$mail->FromName = $from_name;
 	$mail->From = $from;
 
